@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
 
     private var tvInput: TextView? = null
 
-    var  lastNum: Boolean = false
-    var lastPoint: Boolean = false
+    private var  lastNum: Boolean = false
+    private var lastPoint: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 if(tvValue.contains("-")){
                     val splitValue = tvValue.split("-")
                     var one = splitValue[0] //99
-                    var two = splitValue[1] //1
+                    val two = splitValue[1] //1
                     if(prefix.isNotEmpty()){
                         one = prefix + one
                     }
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 }else if(tvValue.contains("+")){
                     val splitValue = tvValue.split("+")
                     var one = splitValue[0] //99
-                    var two = splitValue[1] //1
+                    val two = splitValue[1] //1
                     if(prefix.isNotEmpty()){
                         one = prefix + one
                     }
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                 } else if(tvValue.contains("/")){
                     val splitValue = tvValue.split("/")
                     var one = splitValue[0] //99
-                    var two = splitValue[1] //1
+                    val two = splitValue[1] //1
                     if(prefix.isNotEmpty()){
                         one = prefix + one
                     }
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                 }else if(tvValue.contains("*")){
                     val splitValue = tvValue.split("*")
                     var one = splitValue[0] //99
-                    var two = splitValue[1] //1
+                    val two = splitValue[1] //1
                     if(prefix.isNotEmpty()){
                         one = prefix + one
                     }
